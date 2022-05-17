@@ -1,0 +1,197 @@
+%!
+% Modificar el tamaño de página a un A5
+<< /PageSize [612 472] >> setpagedevice
+
+%****************** Rectángulo para colorear el fondo ******************
+newpath                    % Iniciar el path del rectángulo para colorear
+                           % el fondo
+0.17 0.17 0.17 setrgbcolor % Establecer el color a un gris oscuro
+
+0 0 moveto                 % Mover el cursor al punto (x,y)=(0,0)
+612 0 rlineto              % Trazar línea del punto (0,0) al (612,0)
+0 472 rlineto              % Trazar línea del punto (612,0) al (612,472)
+-612 0 rlineto             % Trazar línea del punto (612,472) al (0,472)
+closepath                  % Cerrar el rectángulo
+
+fill                       % Colorear el interior de la figura
+stroke                     % Finalizar el path del rectángulo para colorear
+                           % el fondo
+
+
+%************************* Círculos del corazón ************************
+newpath                    % Iniciar el path de los círculos del corazón
+0.83 0 0 setrgbcolor       % Establecer el color a un tono de rojo
+% x   y   R   angI angF
+  95  270 55  0    205  arc % Semicírculo corazón derecha
+
+% x   y   R   angI angF
+  205 270 55  -25  180  arc % Semicírculo corazón derecha
+fill                       % Colorear el interior de la figura
+stroke                     % Finalizar el path de los círculos del corazón
+
+
+%************************** Triángulo corazón **************************
+newpath                    % Iniciar el path del triángulo corazón
+0.83 0 0 setrgbcolor       % Establecer el color a mismo tono de rojo que
+                           % los círculos
+
+258 251 moveto             % Mover el cursor al punto (x,y)=(258,251)
+-109 -120 rlineto          % Trazar línea del punto (258,251) al (149,131)
+-107 120 rlineto           % Trazar línea del punto (149,131) al (42,251)
+closepath                  % Cerrar el triángulo
+
+fill                       % Colorear el interior de la figura
+stroke                     % Finalizar el path del triángulo del corazón
+
+
+%******************************** Texto ********************************
+/Times-Roman findfont      % Definir el tipo de letra del texto
+16 scalefont               % Definir el tamaño de letra del texto
+setfont                    % Deja la fuente disponible para el texto
+
+  newpath                  % Iniciar el path de la primera frase
+  0.0 setgray              % Declarar el tono 0.0 en la escala de gris
+  295 311 moveto           % Mover el cursor al punto (x,y)=(295,311)
+  (El amor, rodeado casi siempre por un antojo) show    % Mostrar frase
+  stroke                   % Finalizar el path de la primera frase
+
+  newpath                  % Iniciar el path de la segunda frase
+  0.1 setgray              % Declarar el tono 0.1 en la escala de gris
+  295 281 moveto           % Mover el cursor al punto (x,y)=(295,281)
+  (de olvido, avanza resuelto hacia las trampas) show   % Mostrar frase
+  stroke                   % Finalizar el path de la segunda frase
+
+  newpath                  % Iniciar el path de la tercera frase
+  0.4 setgray              % Declarar el tono 0.4 en la escala de gris
+  295 251 moveto           % Mover el cursor al punto (x,y)=(295,251)
+  (creadas para cazar osos con piel de leopardo) show   % Mostrar frase
+  stroke                   % Finalizar el path de la tercera frase
+
+  newpath                  % Iniciar el path de la cuarta frase
+  0.6 setgray              % Declarar el tono 0.6 en la escala de gris
+  295 221 moveto           % Mover el cursor al punto (x,y)=(295,221)
+  (y serpientes con plumaje de condor.) show            % Mostrar frase
+  stroke                   % Finalizar el path de la cuarta frase
+
+  newpath                  % Iniciar el path de la quinta frase
+  0.8 setgray              % Declarar el tono 0.8 en la escala de gris
+  295 191 moveto           % Mover el cursor al punto (x,y)=(295,191)
+  (Y el amor sobrevive a las heridas y ruge,) show      % Mostrar frase
+  stroke                   % Finalizar el path de la quinta frase
+
+  newpath                  % Iniciar el path de la última frase
+  1 setgray                % Declarar el tono 1 en la escala de gris
+  295 161 moveto           % Mover el cursor al punto (x,y)=(295,161)
+  (voladora, la envidia de los venenosos.) show         % Mostrar frase
+  stroke                   % Finalizar el path de la última frase
+
+
+%******************** Rectángulo alrededor del texto *******************
+  %-------------------------- Círculos derecha -------------------------
+  newpath                    % Iniciar path círculo
+  1 1 1 setrgbcolor          % Establecer el color a blanco
+  % x   y   R  angI angF
+    600 140 10 270  90   arc % Círculo
+  fill                       % Colorear el interior de la figura
+  % x   y   R  angI angF
+    600 180 10 270  90   arc % Círculo
+  fill                       % Colorear el interior de la figura
+  % x   y   R  angI angF
+    600 220 10 270  90   arc % Círculo
+  fill                       % Colorear el interior de la figura
+  % x   y   R  angI angF
+    600 260 10 270  90   arc % Círculo
+  fill                       % Colorear el interior de la figura
+  % x   y   R  angI angF
+    600 300 10 270  90   arc % Círculo
+  fill                       % Colorear el interior de la figura
+  % x   y   R  angI angF
+    600 340 10 270  90   arc % Círculo
+  fill                       % Colorear el interior de la figura
+  stroke                     % Finalizar el path
+
+  %-------------------------- Círculos arriba --------------------------
+  newpath                    % Iniciar path círculo
+  % x   y   R  angI angF
+    600 340 10 0    180  arc % Círculo
+  fill                       % Colorear el interior de la figura
+  % x   y   R  angI angF
+    560 340 10 0    180  arc % Círculo
+  fill                       % Colorear el interior de la figura
+  % x   y   R  angI angF
+    520 340 10 0    180  arc % Círculo
+  fill                       % Colorear el interior de la figura
+  % x   y   R  angI angF
+    480 340 10 0    180  arc % Círculo
+  fill                       % Colorear el interior de la figura
+  % x   y   R  angI angF
+    440 340 10 0    180  arc % Círculo
+  fill                       % Colorear el interior de la figura
+  % x   y   R  angI angF
+    400 340 10 0    180  arc % Círculo
+  fill                       % Colorear el interior de la figura
+  % x   y   R  angI angF
+    360 340 10 0    180  arc % Círculo
+  fill                       % Colorear el interior de la figura
+  % x   y   R  angI angF
+    320 340 10 0    180  arc % Círculo
+  fill                       % Colorear el interior de la figura
+  % x   y   R  angI angF
+    280 340 10 0    180  arc % Círculo
+  fill                       % Colorear el interior de la figura
+  stroke                     % Finalizar el path
+
+  %------------------------- Círculos izquierda ------------------------
+  newpath                    % Iniciar path círculo
+  % x   y   R  angI angF
+    280 140 10 90   270  arc % Círculo
+  fill                       % Colorear el interior de la figura
+  % x   y   R  angI angF
+    280 180 10 90   270  arc % Círculo
+  fill                       % Colorear el interior de la figura
+  % x   y   R  angI angF
+    280 220 10 90   270  arc % Círculo
+  fill                       % Colorear el interior de la figura
+  % x   y   R  angI angF
+    280 260 10 90   270  arc % Círculo
+  fill                       % Colorear el interior de la figura
+  % x   y   R  angI angF
+    280 300 10 90   270  arc % Círculo
+  fill                       % Colorear el interior de la figura
+  % x   y   R  angI angF
+    280 340 10 90   270  arc % Círculo
+  fill                       % Colorear el interior de la figura
+  stroke                     % Finalizar el path
+
+  %--------------------------- Círculos abajo --------------------------
+  newpath                    % Iniciar path círculo
+  % x   y   R  angI angF
+    600 140 10 180  0    arc % Círculo
+  fill                       % Colorear el interior de la figura
+  % x   y   R  angI angF
+    560 140 10 180  0    arc % Círculo
+  fill                       % Colorear el interior de la figura
+  % x   y   R  angI angF
+    520 140 10 180  0    arc % Círculo
+  fill                       % Colorear el interior de la figura
+  % x   y   R  angI angF
+    480 140 10 180  0    arc % Círculo
+  fill                       % Colorear el interior de la figura
+  % x   y   R  angI angF
+    440 140 10 180  0    arc % Círculo
+  fill                       % Colorear el interior de la figura
+  % x   y   R  angI angF
+    400 140 10 180  0    arc % Círculo
+  fill                       % Colorear el interior de la figura
+  % x   y   R  angI angF
+    360 140 10 180  0    arc % Círculo
+  fill                       % Colorear el interior de la figura
+  % x   y   R  angI angF
+    320 140 10 180  0    arc % Círculo
+  fill                       % Colorear el interior de la figura
+  % x   y   R  angI angF
+    280 140 10 180  0    arc % Círculo
+  fill                       % Colorear el interior de la figura
+  stroke                     % Finalizar el path
+
+  showpage                   % Mostrar página

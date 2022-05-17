@@ -1,0 +1,128 @@
+%!
+%% Página con una tarjeta de visita
+%******************************* Tarjeta *******************************
+%---------------------- Rectángulo de la tarjeta -----------------------
+newpath                    % Iniciar el path del rectángulo de la tarjeta
+0.83 0.83 0.83 setrgbcolor % Establecer el color a gris azulado
+
+100 480 moveto             % Mover el cursor al punto (x,y)=(100,480)
+300 0 rlineto              % Trazar línea del punto (100,480) al (400,480)
+0 210 rlineto              % Trazar línea del punto (400,480) al (400,690)
+-300 0 rlineto             % Trazar línea del punto (400,690) al (100,690)
+closepath                  % Cerrar el rectángulo
+fill                       % Colorear el interior de la figura
+
+0 0 0 setrgbcolor          % Establecer el color a negro
+100 480 moveto             % Mover el cursor al punto (x,y)=(100,480)
+300 0 rlineto              % Trazar línea del punto (100,480) al (400,480)
+0 210 rlineto              % Trazar línea del punto (400,480) al (400,690)
+-300 0 rlineto             % Trazar línea del punto (400,690) al (100,690)
+closepath                  % Cerrar el rectángulo
+
+stroke                     % Finalizar el path del rectángulo de la
+                           % tarjeta
+
+%******************************* Círculo *******************************
+%--------------------------- Circunferencia ----------------------------
+newpath                    % Iniciar el path del círculo
+0.17 0.17 0.33 setrgbcolor % Establecer el color a azul oscuro
+% x   y   R  angI angF
+  175 585 65 0    360  arc % Coordenadas círculo
+
+stroke                     % Finalizar el path del círculo
+
+%------------------------------ Creeper --------------------------------
+newpath                    % Iniciar el path del Creeper
+130 630 moveto             % Mover el cursor al punto (x,y)=(130,630)
+30 0 rlineto               % Trazar línea del punto (130,630) al (160,630)
+0 -30 rlineto              % Trazar línea del punto (160,630) al (160,600)
+-30 0 rlineto              % Trazar línea del punto (160,600) al (130,600)
+closepath                  % Cerrar el cuadrado
+
+190 630 moveto             % Mover el cursor al punto (x,y)=(190,630)
+30 0 rlineto               % Trazar línea del punto (190,630) al (220,630)
+0 -30 rlineto              % Trazar línea del punto (220,630) al (220,600)
+-30 0 rlineto              % Trazar línea del punto (220,600) al (190,600)
+closepath                  % Cerrar el cuadrado
+
+160 600 moveto             % Mover el cursor al punto (x,y)=(160,600)
+30 0 rlineto               % Trazar línea del punto (160,600) al (190,600)
+0 -15 rlineto              % Trazar línea del punto (190,600) al (190,585)
+15 0 rlineto               % Trazar línea del punto (190,585) al (205,585)
+0 -45 rlineto              % Trazar línea del punto (205,585) al (205,540)
+-15 0 rlineto              % Trazar línea del punto (205,540) al (190,540)
+0 15 rlineto               % Trazar línea del punto (190,540) al (190,555)
+-30 0 rlineto              % Trazar línea del punto (190,555) al (160,555)
+0 -15 rlineto              % Trazar línea del punto (160,555) al (160,540)
+-15 0 rlineto              % Trazar línea del punto (160,540) al (145,540)
+0 45 rlineto               % Trazar línea del punto (145,540) al (145,585)
+15 0 rlineto               % Trazar línea del punto (145,585) al (160,585)
+closepath                  % Cerrar la figura
+
+fill                       % Colorear el interior de la figura
+stroke                     % Finalizar el path del Creeper
+
+%******************************** Texto ********************************
+%------------------------------- Nombre --------------------------------
+/Times-Roman findfont      % Definir el tipo de letra del texto
+14 scalefont               % Definir el tamaño de letra del texto
+setfont                    % Deja la fuente disponible para el texto
+
+  newpath                  % Iniciar el path con el texto del nombre
+  0.1 setgray              % Declarar el tono 0.1 en la escala de gris
+  317 610 moveto           % Mover el cursor al punto (x,y)=(317,610)
+  (Laura Porto) show                           % Mostrar texto
+  stroke                   % Finalizar el path con el texto del nombre
+
+%------------------------------ Trabajo --------------------------------
+/Times-Roman findfont      % Definir el tipo de letra del texto
+10 scalefont               % Definir el tamaño de letra del texto
+setfont                    % Deja la fuente disponible para el texto
+
+  newpath                  % Iniciar el path con el texto con el trabajo
+  0.1 setgray              % Declarar el tono 0.1 en la escala de gris
+  280 595 moveto           % Mover el cursor al punto (x,y)=(280,595)
+  (Especialista en Marketing) show             % Mostrar texto
+  stroke                   % Finalizar el path con el texto con el trabajo
+
+%----------------------------- Dirección -------------------------------
+/Times-Roman findfont      % Definir el tipo de letra del texto
+8 scalefont                % Definir el tamaño de letra del texto
+setfont                    % Deja la fuente disponible para el texto
+
+  newpath                  % Iniciar el path con el texto de la dirección
+                           % Calle y número
+  0.1 setgray              % Declarar el tono 0.1 en la escala de gris
+  332 565 moveto           % Mover el cursor al punto (x,y)=(332,565)
+  (Av. Sirena, 134) show                       % Mostrar texto
+  stroke                   % Finalizar el path con el texto de la dirección
+
+  newpath                  % Iniciar el path con el texto de la dirección
+                           % Local y edificio
+  0.1 setgray              % Declarar el tono 0.1 en la escala de gris
+  297 555 moveto           % Mover el cursor al punto (x,y)=(297,555)
+  (Local 7 - Edificio Penta II) show           % Mostrar texto
+  stroke                   % Finalizar el path con el texto de la dirección
+%----------------------- Código postal/Provincia -----------------------
+  newpath                  % Iniciar el path con el texto del código postal
+                           % y la provincia
+  0.1 setgray              % Declarar el tono 0.1 en la escala de gris
+  330 545 moveto           % Mover el cursor al punto (x,y)=(330,545)
+  (18001, Granada) show                        % Mostrar texto
+  stroke                   % Finalizar el path con el texto del código
+                           % postal y la provincia
+%------------------------------ Teléfono -------------------------------
+  newpath                  % Iniciar el path con el texto con el teléfono
+  0.1 setgray              % Declarar el tono 0.1 en la escala de gris
+  277 535 moveto           % Mover el cursor al punto (x,y)=(277,535)
+  (Tels. 958 325 874 / 659 748 563) show       % Mostrar texto
+  stroke                   % Finalizar el path con el texto con el teléfono
+%------------------------- Correo electrónico --------------------------
+  newpath                  % Iniciar el path con el texto con el correo
+                           % electrónico
+  0.1 setgray              % Declarar el tono 0.1 en la escala de gris
+  298 525 moveto           % Mover el cursor al punto (x,y)=(298,525)
+  (lauraporto@tecnotec.com) show               % Mostrar texto
+  stroke                   % Finalizar el path con el texto con el correo
+                           % electrónico
+showpage                   % Mostrar página
